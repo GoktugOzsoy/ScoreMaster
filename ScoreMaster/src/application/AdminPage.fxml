@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminPageController">
+   <children>
+      <AnchorPane fx:id="adminpage_mainform" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="611.0" fitWidth="1102.0">
+               <image>
+                  <Image url="@../../../../Desktop/Java%20Proje/background/zxlTcE.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="adminpage_topAnchorPanel" layoutX="1.0" prefHeight="70.0" prefWidth="1100.0">
+               <children>
+                  <Label layoutX="478.0" layoutY="18.0" text="Admin Panel" AnchorPane.leftAnchor="478.0" AnchorPane.rightAnchor="477.6">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="1027.0" layoutY="13.0" AnchorPane.rightAnchor="38.6">
+                     <image>
+                        <Image url="@../../../../Desktop/Java%20Proje/Logo/1/exit%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="adminpage_logoutButton" layoutX="1015.0" layoutY="13.0" mnemonicParsing="false" onAction="#logout" opacity="1.0E-21" prefHeight="46.0" prefWidth="46.0" />
+                  <Button fx:id="adminpage_mainButton" layoutX="25.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchForm" opacity="1.0E-28" prefHeight="60.0" prefWidth="200.0" stylesheets="@application.css" />
+                  <Button fx:id="adminpage_editUsersButton" layoutX="244.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchForm" stylesheets="@application.css" text="Edit Users">
+                     <styleClass>
+                        <String fx:value="calendarMini" />
+                        <String fx:value="btn-3" />
+                        <String fx:value="shadow" />
+                     </styleClass></Button>
+                  <Button fx:id="adminpage_editCommentsButton" layoutX="336.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchForm" stylesheets="@application.css" text="Edit Comments">
+                     <styleClass>
+                        <String fx:value="calendarMini" />
+                        <String fx:value="btn-3" />
+                        <String fx:value="shadow" />
+                     </styleClass></Button>
+                  <Label layoutX="697.0" layoutY="19.0" text="Welcome: ">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="adminpage_adminUsername" layoutX="808.0" layoutY="19.0" prefHeight="35.0" prefWidth="162.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="47.0" layoutY="20.0" prefHeight="27.0" prefWidth="30.0" styleClass="white-bg" stylesheets="@application.css" AnchorPane.topAnchor="19.0" />
+                  <ImageView fitHeight="67.0" fitWidth="200.0" layoutX="13.0" layoutY="2.0" AnchorPane.leftAnchor="25.0">
+                     <image>
+                        <Image url="@../../../../Desktop/Java%20Proje/Logo/1/Ekran_görüntüsü_2023-12-19_211937-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="adminpage_gameListAnchor" layoutX="1.0" layoutY="70.0" prefHeight="530.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.39999999999997726" AnchorPane.leftAnchor="0.7999999999999545" AnchorPane.rightAnchor="0.599999999999909" AnchorPane.topAnchor="69.60000000000002">
+               <children>
+                  <TableView fx:id="adminpage_gameTable" maxHeight="330.0" onMouseClicked="#gameSelectData" prefHeight="350.0" prefWidth="1100.0" stylesheets="@application.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="userpage_gameName" editable="false" prefWidth="238.39998780488986" resizable="false" text="Game" />
+                        <TableColumn fx:id="userpage_gameReleaseDate" editable="false" prefWidth="170.40005493164062" resizable="false" text="Release Date" />
+                        <TableColumn fx:id="userpage_gameType" editable="false" prefWidth="185.60003662109375" resizable="false" sortable="false" text="Type" />
+                        <TableColumn fx:id="userpage_gameScore" editable="false" prefWidth="111.20001220703125" resizable="false" text="Rank" />
+                        <TableColumn fx:id="userpage_gameID" editable="false" prefWidth="83.199951171875" resizable="false" text="ID" />
+                        <TableColumn fx:id="userpage_gameSummaryColumn" editable="false" prefWidth="291.19989013671875" resizable="false" sortable="false" text="Summary" />
+                     </columns>
+                     <styleClass>
+                        <String fx:value="table-row-cell2" />
+                        <String fx:value="centered-table" />
+                     </styleClass>
+                  </TableView>
+                  <AnchorPane fx:id="adminpage_gameImportAnchor" layoutY="330.0" prefHeight="210.0" prefWidth="1100.0" stylesheets="@application.css">
+                     <children>
+                        <Button fx:id="adminpage_updateButton" layoutX="771.0" layoutY="6.0" mnemonicParsing="false" onAction="#gameUpdateButton" prefHeight="200.0" prefWidth="70.0" stylesheets="@application.css" text="Update">
+                           <styleClass>
+                              <String fx:value="calendarMini" />
+                              <String fx:value="btn-2" />
+                              <String fx:value="shadow" />
+                           </styleClass></Button>
+                        <Button fx:id="adminpage_deleteButton" layoutX="688.0" layoutY="6.0" mnemonicParsing="false" onAction="#gameDeleteButton" prefHeight="200.0" prefWidth="70.0" stylesheets="@application.css" text="Delete">
+                           <styleClass>
+                              <String fx:value="calendarMini" />
+                              <String fx:value="btn-2" />
+                              <String fx:value="shadow" />
+                           </styleClass></Button>
+                        <Button fx:id="adminpage_imageImportButton" layoutX="854.0" layoutY="6.0" mnemonicParsing="false" onAction="#gameImageImportButton" prefHeight="200.0" prefWidth="69.0" stylesheets="@application.css" text="Import">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn-2" />
+                              <String fx:value="shadow" />
+                              <String fx:value="calendarMini" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="adminpage_addGameButton" layoutX="196.0" layoutY="155.0" mnemonicParsing="false" onAction="#gamesAddButton" prefHeight="26.0" prefWidth="150.0" stylesheets="@application.css" text="Add">
+                           <styleClass>
+                              <String fx:value="calendarMini" />
+                              <String fx:value="btn-2" />
+                              <String fx:value="shadow" />
+                           </styleClass></Button>
+                        <AnchorPane fx:id="adminpage_imageAnchor" layoutX="935.0" layoutY="6.0" prefHeight="200.0" prefWidth="150.0" stylesheets="@application.css">
+                           <children>
+                              <ImageView fx:id="adminpage_imageView" fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass></ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                           </styleClass></AnchorPane>
+                        <Label layoutX="79.0" layoutY="50.0" text="Game Name: ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="79.0" layoutY="82.0" text="Game Release Date: ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="79.0" layoutY="113.0" text="Game Type: ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="adminpage_addGameNameText" layoutX="196.0" layoutY="46.0" stylesheets="@application.css">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="calendarMini" />
+                           </styleClass></TextField>
+                        <TextField fx:id="adminpage_addGameReleaseDateText" layoutX="196.0" layoutY="78.0" stylesheets="@application.css">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="calendarMini" />
+                           </styleClass></TextField>
+                        <TextField fx:id="adminpage_addGameTypeText" layoutX="196.0" layoutY="109.0" stylesheets="@application.css">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="calendarMini" />
+                           </styleClass></TextField>
+                        <Button fx:id="adminpage_clearButton" layoutX="79.0" layoutY="155.0" mnemonicParsing="false" onAction="#gameClearButton" prefHeight="26.0" prefWidth="54.0" stylesheets="@application.css" text="Clear">
+                           <styleClass>
+                              <String fx:value="btn-2" />
+                              <String fx:value="shadow" />
+                              <String fx:value="calendarMini" />
+                           </styleClass></Button>
+                        <Label layoutX="79.0" layoutY="20.0" text="Game ID: ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="adminpage_addGameIDText" layoutX="196.0" layoutY="14.0" stylesheets="@application.css">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="calendarMini" />
+                           </styleClass></TextField>
+                        <TextField fx:id="adminpage_addSummaryText" alignment="TOP_LEFT" layoutX="372.0" layoutY="12.0" prefHeight="132.0" prefWidth="294.0" stylesheets="@application.css">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="calendarMini" />
+                           </styleClass></TextField>
+                        <Label layoutX="492.0" layoutY="160.0" text="Summary">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Line endX="100.0" layoutX="519.0" layoutY="152.0" startX="-100.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="adminpage_usersEditAnchor" layoutX="11.0" layoutY="80.0" prefHeight="530.0" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.8" AnchorPane.rightAnchor="0.7999999999999545" AnchorPane.topAnchor="70.4">
+               <children>
+                  <TableView fx:id="adminpage_userListTableView" maxHeight="450.0" prefHeight="450.0" prefWidth="1100.0" stylesheets="@application.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="adminpage_userIDcolumn" editable="false" prefWidth="196.80001217126846" resizable="false" text="ID" />
+                      <TableColumn fx:id="adminpage_usernameColumn" editable="false" prefWidth="433.60008239746094" resizable="false" text="Username" />
+                        <TableColumn fx:id="adminpage_userEmailColumn" editable="false" prefWidth="455.0" resizable="false" sortable="false" text="Email" />
+                    </columns>
+                     <styleClass>
+                        <String fx:value="table-row-cell2" />
+                        <String fx:value="centered-table" />
+                     </styleClass>
+                  </TableView>
+                  <AnchorPane fx:id="adminpage_editUsersBottomAnchor" layoutY="450.0" prefHeight="90.0" prefWidth="1100.0">
+                     <children>
+                        <Button fx:id="adminpage_giveAuthorityButton" layoutX="270.0" layoutY="19.0" mnemonicParsing="false" onAction="#giveAuthority" onMouseClicked="#giveAuthority" prefHeight="52.0" prefWidth="642.0" stylesheets="@application.css" text="Give Authority">
+                           <styleClass>
+                              <String fx:value="btn-2" />
+                              <String fx:value="shadow" />
+                              <String fx:value="calendarMini" />
+                           </styleClass></Button>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <AnchorPane fx:id="adminpage_commentsEditAnchor" layoutX="11.0" layoutY="80.0" prefHeight="530.0" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.8" AnchorPane.rightAnchor="0.7999999999999545" AnchorPane.topAnchor="70.4">
+               <children>
+                  <AnchorPane fx:id="adminpage_checkCommentTableAnchor" layoutX="14.0" layoutY="20.0" prefHeight="500.0" prefWidth="350.0" styleClass="textfield-1" stylesheets="@application.css">
+                     <children>
+                        <TableView fx:id="adminpage_checkCommentTableView" layoutX="124.0" layoutY="60.0" prefHeight="500.0" prefWidth="350.4" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="adminpage_editCommentImageColumn" editable="false" prefWidth="82.0" resizable="false" sortable="false" text="Image" />
+                              <TableColumn fx:id="adminpage_editCommentGameNameColumn" editable="false" prefWidth="156.79998779296875" resizable="false" text="Game" />
+                            <TableColumn fx:id="adminpage_editCommentGoCommentButton" editable="false" prefWidth="113.60006713867188" resizable="false" sortable="false" />
+                          </columns>
+                           <styleClass>
+                              <String fx:value="table-row-cell2" />
+                              <String fx:value="centered-table" />
+                           </styleClass>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="adminpage_deleteCommentTableAnchor" layoutX="386.0" layoutY="20.0" prefHeight="500.0" prefWidth="700.0" styleClass="textfield-1" stylesheets="@application.css">
+                     <children>
+                        <TableView fx:id="adminpage_deleteCommentTableview" layoutX="250.0" layoutY="98.0" prefHeight="500.0" prefWidth="700.0" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="adminpage_commentListUsername" editable="false" prefWidth="183.20001220703125" resizable="false" text="Username" />
+                            <TableColumn fx:id="adminpage_editCommentCommentColumn" editable="false" prefWidth="452.800048828125" resizable="false" sortable="false" text="Comment" />
+                              <TableColumn fx:id="adminpage_editCommentDeleteButtonColumn" editable="false" prefWidth="44.0" resizable="false" sortable="false" text="Delete" />
+                          </columns>
+                           <styleClass>
+                              <String fx:value="table-row-cell2" />
+                              <String fx:value="centered-table" />
+                           </styleClass>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

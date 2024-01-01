@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserScreenpageController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1115.0">
+         <image>
+            <Image url="@../../../../Desktop/Java%20Proje/background/123456.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="userpage_mainform" prefHeight="624.0" prefWidth="1110.0">
+         <children>
+            <AnchorPane fx:id="userpage_topAnchor" prefHeight="70.0" prefWidth="1100.0">
+               <children>
+                  <AnchorPane layoutX="49.0" layoutY="21.0" prefHeight="26.0" prefWidth="28.0" styleClass="white-bg" stylesheets="@application.css" />
+                  <ImageView fitHeight="70.0" fitWidth="201.0" layoutX="26.0" layoutY="1.0">
+                     <image>
+                        <Image url="@../../../../Desktop/Java%20Proje/Logo/1/Ekran_görüntüsü_2023-12-17_153414-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="userpage_mainButton" layoutX="25.0" layoutY="6.0" mnemonicParsing="false" onAction="#switchToMainPage" opacity="1.0E-12" prefHeight="59.0" prefWidth="202.0" text="Main Page" AnchorPane.leftAnchor="25.0" />
+                  <Label layoutX="741.0" layoutY="18.0" text="Welcome: ">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="userpage_usernameLabel" layoutX="852.0" layoutY="19.0" prefHeight="27.0" prefWidth="143.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
+                  <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="1015.0" layoutY="12.0">
+                     <image>
+                        <Image url="@../../../../Desktop/Java%20Proje/Logo/1/exit%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="userpage_logoutButton" layoutX="1015.0" layoutY="13.0" mnemonicParsing="false" onAction="#logout" opacity="1.0E-21" prefHeight="46.0" prefWidth="46.0" AnchorPane.rightAnchor="38.6" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="userpage_gameListTableView" layoutY="70.0" prefHeight="530.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.39999999999997726" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.60000000000002">
+               <children>
+                  <TableView fx:id="userpage_gamesTableView" prefHeight="530.4" prefWidth="1100.0" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="username_imageColumn" editable="false" prefWidth="90.0" resizable="false" sortable="false" text="Image" />
+                      <TableColumn fx:id="username_gameNameColumn" editable="false" prefWidth="284.00001525878906" resizable="false" text="Game" />
+                        <TableColumn fx:id="userpage_releaseDateColumn" editable="false" prefWidth="209.5999755859375" resizable="false" text="Release Date" />
+                        <TableColumn fx:id="userpage_gameTypeColumn" editable="false" prefWidth="236.79998779296875" resizable="false" sortable="false" text="Game Type" />
+                        <TableColumn fx:id="userpage_gameScoreColumn" editable="false" prefWidth="150.39996337890625" resizable="false" text="Rank" />
+                        <TableColumn fx:id="userpage_gamePageButtonColumn" editable="false" prefWidth="144.00004882812505" resizable="false" sortable="false" text="Game Page" />
+                    </columns>
+                     <styleClass>
+                        <String fx:value="table-row-cell" />
+                        <String fx:value="centered-table" />
+                     </styleClass>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="userpage_selectedGamePage" prefHeight="530.0" prefWidth="1115.0" visible="false" AnchorPane.bottomAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="userpage_gamePageImageAnchor" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="150.0" stylesheets="@application.css">
+                     <children>
+                        <ImageView fx:id="userpage_gamePageImageView" fitHeight="203.0" fitWidth="153.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+                  <Label fx:id="userpage_gamePageGameName" layoutX="183.0" layoutY="14.0" prefHeight="39.0" prefWidth="427.0" text="game name">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font></Label>
+                  <Label layoutX="193.0" layoutY="80.0" prefHeight="27.0" prefWidth="119.0" text="Release Date ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="193.0" layoutY="140.0" text="Game Rank">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="69.20001220703125" endY="0.20000457763671875" layoutX="243.0" layoutY="107.0" startX="-57.40000915527344" startY="0.20000457763671875" />
+                  <Line endX="66.79998779296875" layoutX="246.0" layoutY="167.0" startX="-59.59999084472656" />
+                  <Label fx:id="userpage_gamePageReleaseDate" layoutX="193.0" layoutY="108.0" prefHeight="27.0" prefWidth="111.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="userpage_gamePageScore" layoutX="221.0" layoutY="175.0" prefHeight="18.0" prefWidth="63.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="57.0" layoutY="226.0" text="Summary">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Line endX="51.80000305175781" layoutX="89.0" layoutY="246.0" startX="-52.5000114440918" />
+                  <Label fx:id="userpage_gamePageSummary" alignment="TOP_LEFT" layoutX="14.0" layoutY="258.0" prefHeight="100.0" prefWidth="500.0" stylesheets="@application.css" text="Label" wrapText="true">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="calendarExtraMini" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Button fx:id="userpage_gameCannotSendCommentButton" layoutX="769.0" layoutY="223.0" mnemonicParsing="false" mouseTransparent="true" onAction="#sendCommentDatas" prefHeight="26.0" prefWidth="201.0" stylesheets="@application.css" text="You already have a comment" textFill="#810808">
+                     <styleClass>
+                        <String fx:value="calendarMini" />
+                        <String fx:value="btn-1" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font size="11.0" />
+                     </font></Button>
+                  <Button fx:id="userpage_gamePageSendCommentButton" layoutX="769.0" layoutY="223.0" mnemonicParsing="false" onAction="#sendCommentDatas" prefHeight="26.0" prefWidth="201.0" stylesheets="@application.css" text="Send">
+                     <styleClass>
+                        <String fx:value="btn-1" />
+                        <String fx:value="shadow" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_0" layoutX="702.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore0" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="0">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-5" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_1" layoutX="730.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore1" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="1">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-6" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_2" layoutX="758.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore2" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="2">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-7" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_3" layoutX="786.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore3" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="3">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-8" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_4" layoutX="814.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore4" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="4">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-8" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_5" layoutX="842.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore5" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="5">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-10" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_6" layoutX="870.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore6" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="6">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-11" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_7" layoutX="898.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore7" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="7">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-12" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_8" layoutX="926.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore8" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="8">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-13" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_9" layoutX="954.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore9" prefHeight="26.0" prefWidth="28.0" stylesheets="@application.css" text="9">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-14" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <Button fx:id="button_10" layoutX="982.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonScore10" prefHeight="26.0" prefWidth="40.0" stylesheets="@application.css" text="10">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button123" />
+                        <String fx:value="btn-15" />
+                        <String fx:value="calendarMini" />
+                     </styleClass></Button>
+                  <TextArea fx:id="userpage_gamePageMakeComment" layoutX="668.0" layoutY="18.0" prefHeight="150.0" prefWidth="403.0" stylesheets="@application.css" wrapText="true">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass></TextArea>
+                  <AnchorPane layoutY="382.0" prefHeight="150.0" prefWidth="1099.0">
+                     <children>
+                        <TableView fx:id="userpage_gameCommentTableView" layoutX="266.0" layoutY="36.0" prefHeight="150.0" prefWidth="1115.0" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-16.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="userpage_gamePageUsernameColumn" editable="false" prefWidth="352.0000427365303" resizable="false" text="Username" />
+                            <TableColumn fx:id="userpage_gamePageScoreColumn" editable="false" prefWidth="231.199951171875" resizable="false" text="Score" />
+                              <TableColumn fx:id="userpage_gamePageCommentColumn" editable="false" prefWidth="513.0" resizable="false" sortable="false" text="Comment" />
+                          </columns>
+                           <styleClass>
+                              <String fx:value="table-row-cell" />
+                              <String fx:value="centered-table" />
+                           </styleClass>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="403.0" layoutY="80.0" text="Score">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userpage_gameAverageScoreLabel" layoutX="384.0" layoutY="118.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Label>
+                  <Line endX="69.20001220703125" endY="0.20000457763671875" layoutX="421.0" layoutY="107.0" startX="-57.40000915527344" startY="0.20000457763671875" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

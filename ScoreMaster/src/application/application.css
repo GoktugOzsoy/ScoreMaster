@@ -1,0 +1,349 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);
+}
+
+.btn-1{
+    -fx-background-color: linear-gradient(to bottom right, #FFA200, #FF7800);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+
+.btn-1:hover{
+    -fx-background-color: linear-gradient(to bottom right, #FF7800, #FFA200);
+}
+
+.btn-1:pressed{
+    -fx-background-color: linear-gradient(to bottom right, #FF7800, #BD600F);
+}
+
+.btn-2{
+    -fx-background-color: linear-gradient(to bottom right, #61E1EE, #11C0D1);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+
+.btn-2:hover{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #61E1EE);
+}
+
+.btn-2:pressed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+}
+
+.textfield-1{
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+
+.textfield-1:focused{
+    -fx-border-color: linear-gradient(to bottom right, #FF7800, #FE9E00);
+    -fx-border-width: 1px;
+}
+
+.textfield-2{
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+.textfield-2:focused{
+    -fx-border-color: linear-gradient(to bottom right, #069ADA, #069ADA);
+    -fx-border-width: 1px;
+}
+
+/* Selected row */
+.table-view:focused .table-row-cell:filled:focused:selected {
+    
+}
+
+/* Selected row when table not focused */
+.table-row-cell:filled:focused:selected {
+    
+}
+
+/* Row hovered */
+.table-view:row-selection .table-row-cell:filled:hover {
+    
+}
+
+/* Selected row hovered */
+.table-view:focused .table-row-cell:filled:focused:selected:hover {
+    
+}
+
+.root{
+    -fx-background-color: #262626;
+}
+
+/*başlık*/
+.table-view1 .column-header-background{
+    -fx-background-color: linear-gradient(#F96600 0%, #F96600 100%);
+}
+
+/*table başlık yazıları rengi*/
+.table-view1 .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+}
+
+/*ilk satır */
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #F6E2C0 ;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+/*ikinci satır */
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #ffffff;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #FF7800;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.calendar{
+  -fx-border-radius: 20 20 20 20;
+  -fx-background-radius: 20 20 20 20;
+}
+
+.calendarMini{
+  -fx-border-radius: 10 10 10 10;
+  -fx-background-radius: 10 10 10 10;
+}
+
+.calendarExtraMini{
+  -fx-border-radius: 5 5 5 5;
+  -fx-background-radius: 5 5 5 5;
+}
+
+
+.check-box2 .box {
+-fx-background-color: white;
+-fx-border-color:grey;
+-fx-border-radius:3px; 
+}
+
+.check-box2:selected .mark {
+-fx-background-color: white;
+}
+
+.check-box2:selected .box {
+-fx-background-color: linear-gradient(to bottom right, #61E1EE, #11C0D1);
+}
+
+.check-box1 .box {
+-fx-background-color: white;
+-fx-border-color:grey;
+-fx-border-radius:3px; 
+}
+
+.check-box1:selected .mark {
+-fx-background-color: white;
+}
+
+.check-box1:selected .box {
+-fx-background-color: linear-gradient(to bottom right, #FFA200,#FF7800);
+}
+
+
+.btn-3{
+    -fx-background-color: linear-gradient(to bottom right, #61E1EE, #11C0D1);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+
+.btn-3:hover{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #61E1EE);
+}
+
+.btn-3:pressed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+
+
+.btn-3:focused{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+
+
+/*ilk satır */
+.table-row-cell2{
+    -fx-background-color:  #7BF1FF;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+/*ikinci satır */
+.table-row-cell2:odd{
+    -fx-background-color:  #ffffff;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+.table-row-cell2:selected {
+    -fx-background-color: #11C0D1;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+
+
+.btn-4{
+    -fx-background-color: linear-gradient(to bottom right, #61E1EE, #11C0D1);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+
+.btn-4:hover{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #61E1EE);
+}
+
+.btn-4:pressed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-4:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+/*buradan başlıyo */
+.btn-5{
+    -fx-background-color: linear-gradient(to bottom right, #FF0000, #FF3300);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-5:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-6{
+    -fx-background-color: linear-gradient(to bottom right, #FF3300, #FF6600);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-6:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-7{
+    -fx-background-color: linear-gradient(to bottom right, #FF6600, #FF9900);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-7:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-8{
+    -fx-background-color: linear-gradient(to bottom right, #FF9900, #FFCC00);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-8:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-9{
+    -fx-background-color: linear-gradient(to bottom right, #FFCC00, #FFFF00);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-9:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-10{
+    -fx-background-color: linear-gradient(to bottom right, #FFFF00, #CCFF00);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-10:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-11{
+    -fx-background-color: linear-gradient(to bottom right, #CCFF00, #99FF00);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-11:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-12{
+    -fx-background-color: linear-gradient(to bottom right, #99FF00, #66FF00);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-12:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-13{
+    -fx-background-color: linear-gradient(to bottom right, #66FF00, #33FF00);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-13:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-14{
+    -fx-background-color: linear-gradient(to bottom right, #33FF00, #00FF00);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-14:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+.btn-15{
+    -fx-background-color: linear-gradient(to bottom right, #00FF00, #00FF00);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-15:focussed{
+    -fx-background-color: linear-gradient(to bottom right, #11C0D1, #069ADA);
+}
+
+.button123:focused {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+
+.centered-table .column-header {
+    -fx-alignment: CENTER;
+}
+
+.centered-table .table-cell {
+    -fx-alignment: CENTER;
+}
