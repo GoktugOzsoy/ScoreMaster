@@ -31,4 +31,82 @@
 `mvn clean javafx:run`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will launch the application and present you with the login screen.<br>
 &nbsp;&nbsp;&nbsp;2️⃣ Database Connection<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The application establishes a connection to the MySQL database:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The application establishes a connection to the MySQL database:<br>
+```
+public class DatabaseConnection {
+    private static final String URL = "jdbc:mysql://localhost:3306/your_database";
+    private static final String USER = "root";
+    private static final String PASSWORD = "password";
+
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+}
+```
+&nbsp;&nbsp;&nbsp;3️⃣ User Authentication<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The system supports role-based authentication, allowing users to log in either as Admin or User.<br>
+
+&nbsp;&nbsp;&nbsp;📦 Installation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Clone the repository:<br>
+`git clone https://github.com/yourusername/javafx-application.git`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Install dependencies:<br>
+`mvn install`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Run the application:<br>
+`mvn clean javafx:run`<br><br><br>
+
+🌐 Database Structure<br>
+&nbsp;&nbsp;&nbsp;The application relies on a MySQL database with the following structure:<br><br>
+
+&nbsp;&nbsp;&nbsp;Users Table<br>
+```
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    mail_address VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role_id INT,
+    FOREIGN KEY (role_id) REFERENCES roles(role_id)
+);
+```
+
+&nbsp;&nbsp;&nbsp;Roles Table<br>
+```
+CREATE TABLE roles (
+    role_id INT PRIMARY KEY,
+    role_name VARCHAR(255) NOT NULL
+);
+```
+
+&nbsp;&nbsp;&nbsp;Combined View<br>
+```
+CREATE VIEW user_role_view AS
+SELECT users.user_id, users.username, users.mail_address, roles.role_name
+FROM users
+JOIN roles ON users.role_id = roles.role_id;
+```
+<br>
+⚙️ Technologies Used<br>
+&nbsp;&nbsp;&nbsp;- Java (JDK 11 or above)<br>
+&nbsp;&nbsp;&nbsp;- JavaFX for the user interface<br>
+&nbsp;&nbsp;&nbsp;- MySQL for database management<br>
+&nbsp;&nbsp;&nbsp;- Maven for dependency management<br><br>
+
+📸 Screenshots<br><br>
+![App Demo](ScreenShot/masterphotos1.jpg)<br>
+![App Demo](ScreenShot/masterphotos1.jpg)<br>
+![App Demo](ScreenShot/masterphotos1.jpg)<br>
+![App Demo](ScreenShot/masterphotos1.jpg)<br>
+![App Demo](ScreenShot/masterphotos1.jpg)<br>
+![App Demo](ScreenShot/masterphotos1.jpg)<br>
+![App Demo](ScreenShot/masterphotos1.jpg)<br>
+
+📌 License
+&nbsp;&nbsp;&nbsp;This project is licensed under the MIT License.
+
+
+
+
+
+
+
+
