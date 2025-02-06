@@ -92,13 +92,13 @@ JOIN roles ON users.role_id = roles.role_id;
 &nbsp;&nbsp;&nbsp;- Maven for dependency management<br><br>
 
 📸 Screenshots<br><br>
-![App Demo](ScreenShot/masterphotos1.jpg)<br>
-![App Demo](ScreenShot/masterphotos1.jpg)<br>
-![App Demo](ScreenShot/masterphotos1.jpg)<br>
-![App Demo](ScreenShot/masterphotos1.jpg)<br>
-![App Demo](ScreenShot/masterphotos1.jpg)<br>
-![App Demo](ScreenShot/masterphotos1.jpg)<br>
-![App Demo](ScreenShot/masterphotos1.jpg)<br>
+![App Demo](screenshots/scoremaster1.jpg)<br>
+![App Demo](screenshots/scoremaster2.jpg)<br>
+![App Demo](screenshots/scoremaster3.jpg)<br>
+![App Demo](screenshots/scoremaster4.jpg)<br>
+![App Demo](screenshots/scoremaster5.jpg)<br>
+![App Demo](screenshots/scoremaster6.jpg)<br>
+![App Demo](screenshots/scoremaster7.jpg)<br>
 
 📌 License
 &nbsp;&nbsp;&nbsp;This project is licensed under the MIT License.
